@@ -93,6 +93,10 @@ header .portfolio-name a {
   color: #ffffff;
 }
 
+.contact-section p a {
+  color: rgba(255, 255, 255, 0.7);
+}
+
 .contact-section p a:hover {
   color: #ffffff;
 }
