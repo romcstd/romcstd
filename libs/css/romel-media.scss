@@ -1,0 +1,54 @@
+@media (min-width: 576px) {
+    .container {
+      max-width: 540px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .container {
+      max-width: 720px;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .container {
+      max-width: 960px;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .container {
+      max-width: 1140px;
+    }
+  }
+  
+  @media (max-width: 991px) {
+    .main {
+      margin-left: 0px !important;
+  
+      .toggle-btn {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        border-radius: 2px;
+        padding: 3px 9px;
+  
+        span {
+          display: block;
+          width: 25px;
+          height: 2px;
+          background: rgba(255, 255, 255, 0.8);
+          margin: 5px 0px;
+        }
+      }
+    }
+  
+    header {
+      left: -280px;
+  
+      &.active {
+        left: 0px;
+      }
+    }
+  }
