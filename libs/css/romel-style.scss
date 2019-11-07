@@ -104,9 +104,9 @@ header {
 .contact-section p{
     a{
       color: rgba(255, 255, 255, 0.7);
-      text-decoration:none;
       &:hover {
         color: #ffffff;
+        text-decoration:none;
       }
     }
 }
