@@ -95,6 +95,8 @@ header .portfolio-name a {
 
 .contact-section p a {
   color: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+  text-decoration: none;
 }
 
 .contact-section p a:hover {
