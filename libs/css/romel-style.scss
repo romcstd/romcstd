@@ -101,6 +101,14 @@ header {
   }
 }
 
+.contact-section p{
+    a{
+      &:hover {
+        color: #ffffff;
+      }
+    }
+}
+
 hr {
   border: 0;
   border-top: 1px solid rgba(255, 255, 255, 0.08)!important;
