@@ -48,10 +48,4 @@
     left: 0px;
   }
 }
-
-@media (max-width: 1240px) and (min-width: 992px) {
-  img.amp {
-    width: 100% !important;
-  }
-}
 /*# sourceMappingURL=romel-media.css.map */
