@@ -3,21 +3,13 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Romel Custodio</title>
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<link rel="shortcut icon" type="" href="" />
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/sidenav.css">
+<title>Romel Custodio</title>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.css'>
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.11.2/css/all.css'>
+<link rel="stylesheet" href="libs/css/custom.css">
 <link rel="stylesheet" href="css/typing.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/fontawesome.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/fontawesome.css">
-<link href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
 <script>
   window.console = window.console || function(t) {};
 </script>
@@ -26,94 +18,178 @@
     window.parent.postMessage("resize", "*");
   }
 </script>
+<style>
+body{
+  background: #2193b0; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2193b0, #6dd5ed); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2193b0, #6dd5ed); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+</style>
 </head>
 <body translate="no">
-  <div id="mySidenav" class="sidenav" style="">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src="img/icon/icon-close.png" width="40px" style=""></a>
-  <nav>
+<div class="page-wrapper chiller-theme">
+<a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
+<i class="fas fa-bars"></i>
+</a>
+
+<nav id="sidebar" class="sidebar-wrapper">
+<div class="sidebar-content">
+<div class="sidebar-brand">
+<a href="index.html">sidebar menu</a>
+<div id="close-sidebar">
+<i class="fas fa-times"></i>
+</div>
+</div>
+<div class="sidebar-header">
+<div class="user-pic">
+<img class="img-responsive img-rounded" src="img/profile/profile.png" alt="User picture">
+</div>
+<div class="user-info">
+<span class="user-name">Romel
+<strong>Custodio</strong>
+</span>
+<span class="user-role">Web Developer</span>
+</div>
+</div>
+<div class="sidebar-menu">
 <ul>
-<li data-target="1" class="nav-btn nav-page1 active"><a>Profile</a></li>
-<li data-target="2" class="nav-btn nav-page2"><a>Interests</a></li>
-<li data-target="3" class="nav-btn nav-page3"><a>Portfolio</a></li>
-<li data-target="4" class="nav-btn nav-page4"><a>Contact</a></li>
-<li data-target="1" class="nav-btn nav-page4"><a href="cv/curriculum-vitae-romel-roxas-custodio.pdf" target="_blank">CV</a></li>
+<li>
+<a href="index.html">
+<i class="fa fa-home"></i>
+<span>Home</span>
+</a>
+</li>
+<!-- <li>
+<a href="profile.html">
+<i class="fa fa-user"></i>
+<span>Profile</span>
+</a>
+</li> -->
+<li>
+<a href="portfolio.html">
+<i class="fa fa-laptop-code"></i>
+<span>Portfolio</span>
+</a>
+</li>
+<li>
+  <a href="cv/curriculum-vitae-romel-roxas-custodio.pdf" target="_blank">
+  <i class="fa fa-file-alt"></i>
+  <span>CV</span>
+  </a>
+  </li>
+<!-- <li>
+<a href="contact.html">
+<i class="fa fa-phone-alt"></i>
+<span>Contact</span>
+</a>
+</li> -->
 </ul>
-</nav>
 </div>
-
-<!-- Use any element to open the sidenav -->
-<span onclick="openNav()"><img src="img/icon/icon-menu.png" width="40px" style="position: fixed;
-    top: 35px;
-    right: 30px; z-index: 1000;"></span>
-
-<div class="wrapper active-page1">
-<div class="page page1">
-
-<div id="table">
-  <div id="centeralign">
-    <img class="profile" src="img/profile/profile.png" width="200px">
-    <h1 class="typing-h1">ROMEL CUSTODIO</h1><br>
-    <p class="typing-p">Hi Welcome to my personal website! Im a web developer based in Sta Mesa Manila. I design and code beautifully simple things, and I love what I do.</p>
-  </div>
-</div>
-
-</div>
-<div class="page page2">
-<div id="table">
-  <div id="centeralign">
-    
-    <h1 class="interests-h1">INTERESTS</h1><br>
-    <ul class="interests-ul">
-      <li>Web Development and Design</li>
-      <li>Graphic Design</li>
-      <li>Photography</li>
-      <li>Video and Mobile Game</li>
-      <li>Listening music</li>
-      <li>Watching NBA, Movies, Kdrama etc.</li>
-      <li>Reading Wattpad</li>
-      <li>Basketball</li>
-      <li>Biking</li>
-      <li>Swimming</li>
-    </ul><br>
-    
-  </div>
-</div>
-</div>
-<div class="page page3">
-<h2>Portfolio</h2>
-</div>
-<div class="page page4">
-<div id="table">
-  <div id="centeralign">
-    
-    <h1 class="interests-h1">Get in Touch</h1><br>
-    <ul class="interests-ul">
-      <li><a href="tel:+639389744926" style="color:white; text-decoration: none;"><!-- <i class="fas fa-phone-alt"></i> --> +639389744926</a></li>
-      <li><a href="mailto:romelroxascustodio@gmail.com" style="color:white; text-decoration: none;"><!-- <i class="far fa-envelope"></i>  -->romelroxascustodio@gmail.com</a></li>
-      <li><!-- <i class="fas fa-map-marker"></i> --> Sta Mesa, Manila</li>
-    </ul><br>
-    
-  </div>
-</div>
-<footer class="check-out">Romel Custodio &copy; <script>document.write(new Date().getFullYear());</script>.</footer>
-</div>
-</div>
-<div class="nav-panel">
-<div class="scroll-btn up"></div>
-<div class="scroll-btn down"></div>
-<nav>
-<ul>
-
-<!-- <li data-target="1" class="nav-btn nav-page1 active"></li>
-<li data-target="2" class="nav-btn nav-page2"></li>
-<li data-target="3" class="nav-btn nav-page3"></li>
-<li data-target="4" class="nav-btn nav-page4"></li> -->
+<div class="sidebar-menu">
+  <ul>
+<li class="header-menu">
+<span>Get in Touch</span>
+</li>
+<li>
+<a href="https://facebook.com/4omel" target="_blank">
+<i class="fab fa-facebook"></i>
+<span>Facebook</span>
+</a>
+</li>
+<li>
+<a href="https://instagram.com/romel_custodio/" target="_blank">
+<i class="fab fa-instagram"></i>
+<span>Instagram</span>
+</a>
+</li>
+<li>
+<a href="https://linkedin.com/in/romel-custodio0251bb195" target="_blank">
+<i class="fab fa-linkedin"></i>
+<span>Linkedin</span>
+</a>
+</li>
+<li>
+<a href="https://github.com/romelroxascustodio" target="_blank">
+<i class="fab fa-github"></i>
+<span>Github</span>
+</a>
+</li>
+<li>
+<a href="tel:+639389744926" target="_blank">
+<i class="fa fa-phone-alt"></i>
+<span>+639389744926</span>
+</a>
+</li>
+<li>
+<a href="mailto:romelroxascustodio@gmail.com" target="_blank">
+<i class="fa fa-envelope"></i>
+<span>romelroxascustodio</span>
+</a>
+</li>
+<li>
+  <a href="https://www.google.com/maps/place/Santa+Mesa,+Manila,+Metro+Manila/@14.5964937,121.0037907,15z/data=!4m5!3m4!1s0x3397c9e642e54baf:0x17a784c44afb692c!8m2!3d14.5976323!4d121.0176092" target="_blank">
+  <i class="fa fa-map-marker"></i>
+  <span>Sta Mesa, Manila</span>
+  </a>
+  </li>
 </ul>
-</nav>
 </div>
+</div>
+<div class="sidebar-footer">
+  <div class="sidebar-brand">
+    <a href="index.html">&copy 2019 Romel Custodio</a>
+    </div>
+</div>
+</nav>
+
+
+  <div id="table">
+    <div id="centeralign" style="text-align:center;">
+      <img class="profile" src="img/profile/profile.png" width="200px">
+      <h1 class="typing-h1">ROMEL CUSTODIO</h1><br>
+      <p class="typing-p">Hi Welcome to my personal website! Im a web developer based in Sta Mesa Manila. I design and code beautifully simple things, and I love what I do.</p>
+    </div>
+  </div>
+
+
+
+</div>
+
 <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-de7e2ef6bfefd24b79a3f68b414b87b8db5b08439cac3f1012092b2290c719cd.js"></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js'></script>
+<!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/esm/popper.js'></script> -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.js'></script>
+<script id="rendered-js">
+      $(".sidebar-dropdown > a").click(function () {
+  $(".sidebar-submenu").slideUp(200);
+  if (
+  $(this).
+  parent().
+  hasClass("active"))
+  {
+    $(".sidebar-dropdown").removeClass("active");
+    $(this).
+    parent().
+    removeClass("active");
+  } else {
+    $(".sidebar-dropdown").removeClass("active");
+    $(this).
+    next(".sidebar-submenu").
+    slideDown(200);
+    $(this).
+    parent().
+    addClass("active");
+  }
+});
+
+$("#close-sidebar").click(function () {
+  $(".page-wrapper").removeClass("toggled");
+});
+$("#show-sidebar").click(function () {
+  $(".page-wrapper").addClass("toggled");
+});
+      //# sourceURL=pen.js
+    </script>
 
 <script>
   
@@ -151,123 +227,5 @@ setTimeout(function(){
 
 
 </script>
-
-<script>
-  
-  /* Set the width of the side navigation to 250px */
-function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-}
-
-/* Set the width of the side navigation to 0 */
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-}
-
-</script>
-
-<script id="rendered-js">
-      'use strict';
-$(document).ready(function () {
-  var $wrap = $(".wrapper"),
-  pages = $(".page").length,
-  scrolling = false,
-  currentPage = 1,
-  $navPanel = $(".nav-panel"),
-  $scrollBtn = $(".scroll-btn"),
-  $navBtn = $(".nav-btn");
-
-  /*****************************
-                           ***** NAVIGATE FUNCTIONS *****
-                           *****************************/
-  function manageClasses() {
-    $wrap.removeClass(function (index, css) {
-      return (css.match(/(^|\s)active-page\S+/g) || []).join(' ');
-    });
-    $wrap.addClass("active-page" + currentPage);
-    $navBtn.removeClass("active");
-    $(".nav-btn.nav-page" + currentPage).addClass("active");
-    $navPanel.addClass("invisible");
-    scrolling = true;
-    setTimeout(function () {
-      $navPanel.removeClass("invisible");
-      scrolling = false;
-    }, 1000);
-  }
-  function navigateUp() {
-    if (currentPage > 1) {
-      currentPage--;
-      if (Modernizr.csstransforms) {
-        manageClasses();
-      } else {
-        $wrap.animate({ "top": "-" + (currentPage - 1) * 100 + "%" }, 1000);
-      }
-    }
-  }
-
-  function navigateDown() {
-    if (currentPage < pages) {
-      currentPage++;
-      if (Modernizr.csstransforms) {
-        manageClasses();
-      } else {
-        $wrap.animate({ "top": "-" + (currentPage - 1) * 100 + "%" }, 1000);
-      }
-    }
-  }
-
-  /*********************
-    ***** MOUSEWHEEL *****
-    *********************/
-  $(document).on("mousewheel DOMMouseScroll", function (e) {
-    if (!scrolling) {
-      if (e.originalEvent.wheelDelta > 0 || e.originalEvent.detail < 0) {
-        navigateUp();
-      } else {
-        navigateDown();
-      }
-    }
-  });
-
-  /**************************
-      ***** RIGHT NAVIGATION ****
-      **************************/
-
-  /* NAV UP/DOWN BTN PAGE NAVIGATION */
-  $(document).on("click", ".scroll-btn", function () {
-    if ($(this).hasClass("up")) {
-      navigateUp();
-    } else {
-      navigateDown();
-    }
-  });
-
-  /* NAV CIRCLE DIRECT PAGE BTN */
-  $(document).on("click", ".nav-btn:not(.active)", function () {
-    if (!scrolling) {
-      var target = $(this).attr("data-target");
-      if (Modernizr.csstransforms) {
-        $wrap.removeClass(function (index, css) {
-          return (css.match(/(^|\s)active-page\S+/g) || []).join(' ');
-        });
-        $wrap.addClass("active-page" + target);
-        $navBtn.removeClass("active");
-        $(this).addClass("active");
-        $navPanel.addClass("invisible");
-        currentPage = target;
-        scrolling = true;
-        setTimeout(function () {
-          $navPanel.removeClass("invisible");
-          scrolling = false;
-        }, 1000);
-      } else {
-        $wrap.animate({ "top": "-" + (target - 1) * 100 + "%" }, 1000);
-      }
-    }
-  });
-
-});
-      //# sourceURL=pen.js
-    </script>
 </body>
 </html>

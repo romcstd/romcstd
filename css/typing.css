@@ -1,7 +1,7 @@
 body, html {
   margin: 0;
   height: 100%;
-  text-align: center;
+
 
   color: #ffffff;
 }
@@ -12,6 +12,7 @@ h1.typing-h1, h1.interests-h1 {
     font-weight: 800;
     letter-spacing: 1pt;
   margin-bottom: 15px;
+  
 }
 
 p.typing-p  {
