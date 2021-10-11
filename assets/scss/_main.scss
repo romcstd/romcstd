@@ -1,0 +1,909 @@
+*, ::after, ::before {
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+     scroll-behavior: smooth;
+     text-rendering: optimizeLegibility;
+ }
+  
+ html, body {
+     -webkit-font-smoothing: antialiased;
+     -webkit-text-size-adjust: 100%;
+     line-height: 1.8;
+ }
+  
+ body {
+     font-family: $font-family-primary;
+     font-weight: 400;
+     color: $color-primary-dark;
+     background-color: $color-primary-light;
+      
+ }
+  
+  html, body, div, span, applet, object, iframe,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  a, abbr, acronym, address, big, cite, code,
+  del, dfn, em, img, ins, kbd, q, s, samp,
+  small, strike, strong, sub, sup, tt, var,
+  b, u, i, center,
+  dl, dt, dd, ol, ul, li,
+  fieldset, form, label, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td,
+  article, aside, canvas, details, embed,
+  figure, figcaption, footer, header, hgroup, main,
+  menu, nav, output, ruby, section, summary,
+  time, mark, audio, video {
+     margin: 0;
+     padding: 0;
+ }
+  
+ a:focus, button:focus {
+     outline: none;
+ }
+
+/* ----- Header ----- */
+.header {
+     display: block;
+     position: fixed;
+     width: 100%;
+     z-index: 999;
+
+     &.header-subpage {
+          // position: relative;
+
+          .navbar {     
+               background-color: $color-primary;
+
+               .navbar-container {
+
+                    .navbar-logo {
+     
+                         .navbar-logo-item {
+     
+                              .navbar-logo-link {
+     
+                                   .navbar-logo-image {
+     
+                                        &.navbar-logo-light-image {
+                                             display: block!important;
+                                        }
+     
+                                        &.navbar-logo-dark-image {
+                                             display: none!important;
+                                        }
+                                   }
+                              }
+                         }
+                    }
+     
+                    .navbar-mobile-menu {
+     
+                         .navbar-mobile-menu-item {
+                              
+                              .navbar-mobile-menu-icon {
+                                   color: $color-primary-light;
+                              }
+                         }
+                    }
+               }
+          }
+     }
+
+     &.scrolled-down {
+          
+          .navbar {
+               background-color: rgba(7, 5, 6, 0.32);
+
+               .navbar-container {
+
+                    .navbar-logo {
+
+                         .navbar-logo-item {
+
+                              .navbar-logo-link {
+
+                                   .navbar-logo-image {
+
+                                        &.navbar-logo-light-image {
+                                             display: block!important;
+                                        }
+
+                                        &.navbar-logo-dark-image {
+                                             display: none!important;
+                                        }
+                                   }
+                              }
+                         }
+                    }
+
+                    .navbar-mobile-menu {
+
+                         .navbar-mobile-menu-item {
+
+                              .navbar-mobile-menu-icon {
+                                   color: $color-primary-light;
+                              }
+                         }
+                    }
+               }
+          }
+     }
+
+     &.active {
+          
+          .navbar {
+               background-color: transparent;
+
+               .navbar-container {
+
+                    .navbar-logo {
+
+                         .navbar-logo-item {
+
+                              .navbar-logo-link {
+
+                                   .navbar-logo-image {
+
+                                        &.navbar-logo-light-image {
+                                             display: block!important;
+                                        }
+
+                                        &.navbar-logo-dark-image {
+                                             display: none!important;
+                                        }
+                                   }
+                              }
+                         }
+                    }
+
+                    .navbar-mobile-menu {
+
+                         .navbar-mobile-menu-item {
+     
+                              .navbar-mobile-menu-icon {
+                                   color: $color-primary-light;
+     
+                                   &::before {
+                                        content: "\f00d"!important;
+                                   }
+                              }
+                         }
+                    }
+               }
+          }
+     }
+     
+     /* ----- Navbar ----- */
+     .navbar {
+          background-color: transparent;
+          padding: 40px 0 40px 0;
+ 
+          .navbar-container {
+ 
+               .navbar-logo {
+ 
+                    .navbar-logo-item {
+ 
+                         .navbar-logo-link {
+                              color: $color-primary-dark;
+                              text-decoration: none;
+                              
+                              .navbar-logo-text {
+                              display: block;
+                              color: $color-primary-dark;
+                              font-size: 24px;
+                              font-weight: 700;
+                              text-transform: uppercase;
+                              }
+
+                              .navbar-logo-image {
+                                   display: block;
+                                   max-width: 100%;
+                                   height: auto;
+                                   width: 125px;
+
+                                   &.navbar-logo-light-image {
+                                        display: none!important;
+                                   }
+                              }
+                         }
+                    }
+               }
+ 
+               .navbar-menu {
+                    display: flex;
+ 
+                    .navbar-menu-item {
+ 
+                         &.active {
+                         
+                              .navbar-menu-link {
+                                   color: $color-primary;
+                              }
+                         }
+ 
+                         .navbar-menu-link {
+                              display: block;
+                              color: $color-primary-light;
+                              font-size: 16px;
+                              font-weight: 400;
+                              text-decoration: none;
+                              text-transform: uppercase;
+                              padding-left: 40px;
+                              padding-right: 40px;
+                              transition: color 300ms ease-in-out;
+
+                         }
+     
+                         &:nth-last-child(1) {
+     
+                              .navbar-menu-link {
+                                   padding-right: 0;
+                              }
+                         }
+                    }
+               }
+ 
+               .navbar-mobile-menu {
+                    display: block!important;
+                    cursor: pointer;
+
+                    .navbar-mobile-menu-item {
+
+                         .navbar-mobile-menu-icon {
+                              font-size: 48px;
+                              color: $color-primary-dark;
+     
+                              &::before {
+                                   content: "\f0c9";
+                              }
+                         }
+                    }
+               }
+          }
+     }
+}
+ 
+/* ----- Sidebar ----- */
+.sidebar {
+     display: none;
+     position: fixed;
+     width: 100%;
+     height: 100vh;
+     background-color: $color-primary;
+     z-index: 998;
+     left: 0;
+     right: 0;
+     top: 0;
+     bottom: 0;
+     overflow: auto;
+
+     .sidebar-container {
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           height: 100%;
+
+          .sidebar-menu {
+
+               .sidebar-menu-item {
+
+                    .sidebar-menu-link {
+                          display: block;
+                          font-size: 36px;
+                          font-weight: 400;
+                          color: $color-primary-light;
+                          text-transform: uppercase;
+                          text-decoration: none;
+                          text-align: $text-center;
+                          margin: 20px 0;
+                          // opacity: 0.7;
+                    }
+
+                    &.active {
+
+                         .sidebar-menu-link {
+                              color: $color-primary;
+                         }
+                    }
+               }
+          }
+     }
+}
+
+/* ----- Main ----- */
+.main {
+
+     &.main-subpage {
+          padding-top: 130.4px;
+     }
+     
+     /* ----- Home Banner ----- */
+     .home-banner {
+         background-color: $color-primary-light;
+     //     background-image: url('../img/background/header/1.jpg');
+         background-size: cover;
+         background-position-x: center;
+         background-position-y: center;
+         height: 100vh;
+    
+          .home-banner-container {
+               height: 100%;
+    
+               .home-banner-row {
+                    height: 100%;
+                    align-items: center;
+    
+                    .home-banner-column {
+     
+                         .home-banner-image {
+                              display: block;
+                              width: 500px;
+                              max-width: 100%;
+                              height: auto;
+                         }
+     
+                         .home-banner-heading {
+                              display: block;
+                              font-size: 60px;
+                              font-weight: 600;
+                              color: $color-primary-dark;
+                              line-height: 1;
+                              margin: 30px 0;
+                              text-align: $text-center;
+                              text-transform: capitalize;
+                         }
+     
+                         .home-banner-subheading {
+                              display: block;
+                              font-size: 60px;
+                              font-weight: 600;
+                              color: $color-primary-dark;
+                              line-height: 1;
+                              margin: 40px 0;
+                              text-align: $text-center;
+     
+                              span {
+                                   font-weight: 700;
+                                   color: $color-primary;
+                              }
+                         }
+     
+                         .home-banner-paragraph {
+                              display: block;
+                              font-size: 24px;
+                              font-weight: 300;
+                              color: $color-primary-dark;
+                              margin: 40px 0;
+                              text-align: $text-center;
+                         }
+     
+                         .home-banner-button {
+                              display: block;
+                              text-align: $text-center;
+     
+                              .home-banner-button-link {
+                                   font-size: 18px;
+                                   font-weight: 400;
+                                   display: inline-block;
+                                   padding: 10px 30px;
+                                   color: $color-primary;
+                                   background-color: transparent;
+                                   border: 1px solid $color-primary;
+                                   border-radius: 30px;
+                                   text-transform: capitalize;
+                                   text-decoration: none;
+                                   transition: color 150ms ease-in-out, background-color 300ms ease-in-out;
+          
+                                   &:hover {
+                                        color: $color-primary-light;
+                                        background-color: $color-primary;
+                                        border: 1px solid $color-primary;
+                                   }
+                              }
+                         }
+                    }
+               }
+          }
+     }
+     
+     /* ----- About ----- */
+     .about {
+          position: relative;
+          padding-top: 150px;
+          padding-bottom: 150px;
+          background-color: $color-primary;
+
+          .about-container {
+
+               .about-row {
+                    justify-content: center;
+
+                    .about-column {
+
+                         .about-content {
+                              text-align: $text-center;
+
+                              .about-content-heading {
+                                   display: block;
+                                   font-size: 60px;
+                                   font-weight: 700;
+                                   text-transform: capitalize;
+                                   color: $color-primary-light;
+                              }
+
+                              .about-content-subheading {
+                                   display: block;
+                                   font-size: 36px;
+                                   font-weight: 600;
+                                   color: $color-primary-light;
+                                   margin-bottom: 15px;
+                              }
+
+                              .about-content-paragraph {
+                                   display: block;
+                                   font-size: 18px;
+                                   font-weight: 300;
+                                   color: $color-primary-light;
+                              }
+                         }
+
+
+                         .about-image-wrapper {
+                              position: relative;
+                              overflow: hidden;
+
+                              .about-image {
+                                   display: block;
+                                   max-width: 100%;
+                                   height: auto;
+                                   width: 500px;
+                                   margin: 0 auto;
+                              }
+                         }
+                    }
+               }
+          }
+     }
+
+     /* ----- Skills ----- */
+     .skills {
+          position: relative;
+          padding-top: 100px;
+          padding-bottom: 100px;
+          background-color: $color-secondary-light;
+          
+          .skills-container {
+
+               .skills-row {
+
+                    .skills-column {
+
+                         .skills-header {
+
+                              .skills-header-heading {
+                                   display: block;
+                                   font-size: 60px;
+                                   font-weight: 700;
+                                   text-transform: capitalize;
+                                   color: $color-primary;
+                                   text-align: $text-left;
+                                   margin-bottom: 1.5rem;
+                              }
+                         }
+
+                         .skills-content {
+
+                              .skills-content-row {
+
+                                   .skills-content-column {
+
+                                        .skills-content-card {
+                                             background-color: $color-primary-light;
+                                             padding: 1.5rem 0;
+                                             margin-bottom: 1.5rem;
+                                             text-align: center;
+                                             border-radius: 4px;
+                                             transition: background-color 150ms ease;
+
+                                             .skills-content-card-icon-wrapper {
+                                                  text-align: $text-center;
+                                                  margin-bottom: 1rem;
+
+                                                  .skills-content-card-image {
+                                                       display: block;
+                                                       max-width: 100%;
+                                                       height: auto;
+                                                       width: 40px;
+                                                  }
+     
+                                                  .skills-content-card-icon {
+                                                       display: block;
+                                                       color: $color-primary-dark;
+                                                       font-size: 2em;
+                                                       width: 1.25em;
+                                                       margin: 0 auto;
+                                                       transition: color 150ms ease;
+                                                  }
+                                                  
+                                                  svg {
+                                                       fill: $color-primary-dark;
+                                                       width: 40px;
+                                                       height: 32px;
+                                                       transition: color 150ms ease;
+
+                                                       .adobe-photoshop-1 {
+                                                            fill: $color-primary-dark;
+                                                       }
+
+                                                       .adobe-photoshop-2 {
+                                                            fill: $color-primary-light;
+                                                       }
+
+                                                       .adobe-illustrator-1 {
+                                                            fill: $color-primary-dark;
+                                                       }
+
+                                                       .adobe-illustrator-2 {
+                                                            fill: $color-primary-light;
+                                                       }
+
+                                                       .filmora-1 {
+                                                            fill: $color-primary-dark;
+                                                       }
+
+                                                       .filmora-2 {
+                                                            fill: $color-primary-light;
+                                                       }
+                                                  }
+                                             }
+
+
+                                             .skills-content-card-heading {
+                                                  display: block;
+                                                  font-size: 14px;
+                                                  font-weight: 400;
+                                                  color: $color-primary-dark;
+                                                  transition: color 150ms ease;
+                                             }
+
+                                             &:hover {
+                                                  background-color: #222222;
+
+                                                  .skills-content-card-icon-wrapper {
+
+                                                       .skills-content-card-icon {
+                                                            color: $color-primary-light;
+                                                       }
+
+                                                       svg {
+                                                            fill: $color-primary-light;
+
+                                                            .adobe-photoshop-1 {
+                                                                 fill: $color-primary-light;
+                                                            }
+     
+                                                            .adobe-photoshop-2 {
+                                                                 fill: #222222;
+                                                            }
+
+                                                            .adobe-illustrator-1 {
+                                                                 fill: $color-primary-light;
+                                                            }
+     
+                                                            .adobe-illustrator-2 {
+                                                                 fill: #222222;
+                                                            }
+
+                                                            .filmora-1 {
+                                                                 fill: $color-primary-light;
+                                                            }
+
+                                                            .filmora-2 {
+                                                                 fill: #222222;
+                                                            }
+                                                       }
+                                                  }
+
+                                                  .skills-content-card-heading {
+                                                       color: $color-primary-light;
+                                                  }
+                                             }
+                                        }
+                                   }
+                              }
+                         }
+
+                         .skills-image-wrapper {
+                              display: flex;
+                              height: 100%;
+                              justify-content: center;
+                              align-items: center;
+                              place-content: center;
+
+                              .skills-image {
+                                   display: block;
+                                   max-width: 100%;
+                                   height: auto;
+                                   margin: auto;
+                                   align-self: center;
+                                   text-align: center;
+                                   width: 500px;
+                              }
+                         }
+                    }
+               }
+          }
+     }
+
+     /* ----- Contact ----- */
+     .contact {
+          position: relative;
+          padding-top: 100px;
+          padding-bottom: 100px;
+          background-color: $color-primary-light;
+
+          .contact-container {
+
+               .contact-row {
+
+                    .contact-column {
+
+                         .contact-image-wrapper {
+
+                              .contact-image {
+                                   display: block;
+                                   max-width: 100%;
+                                   height: auto;
+                                   margin: 0 auto;
+                              }
+                         }
+
+                         .contact-form {
+
+                              .contact-form-row {
+
+                                   .contact-form-column {
+
+                                        .contact-form-heading {
+                                             font-size: 36px;
+                                             font-weight: 700;
+                                             color: $color-primary-dark;
+                                             margin-bottom: 2rem;
+                                        }
+
+                                        .contact-form-item {
+                                             margin-bottom: 2rem;
+
+                                             .contact-form-label {
+                                                  font-size: 16px;
+                                                  font-weight: 300;
+                                                  margin-bottom: 0.5rem;
+                                             }
+
+                                             .contact-form-input {
+                                                  background-color: transparent;
+                                                  padding: 10px 10px;
+                                                  border-radius: 0;
+                                                  box-shadow: none;
+                                                  // border: none;
+                                                  // border-bottom: 1px solid $color-primary-dark;
+
+                                                  &:hover {
+                                                       border: 1px solid $color-primary;
+                                                  }
+                                             }
+
+                                             .contact-form-textarea {
+                                                  background-color: transparent;
+                                                  border-radius: 0;
+                                                  box-shadow: none;
+                                                  // border: none;
+                                                  // border-bottom: 1px solid $color-primary-dark;
+                                                  
+                                                  &:hover {
+                                                       border: 1px solid $color-primary;
+                                                  }
+                                             }
+
+                                             .contact-form-button {
+                                                  display: block;
+                                                  padding: 10px 40px;
+                                                  border-radius: 0;
+                                                  background-color: $color-primary;
+                                                  border: 1px solid $color-primary;
+                                                  color: $color-primary-light;
+                                                  text-transform: uppercase;
+                                                  transition: color 150ms ease, background-color 150ms ease, border-color 150ms ease;
+
+                                                  &:hover {
+                                                       background-color: transparent;
+                                                       color: $color-primary;
+                                                       border: 1px solid $color-primary
+                                                  }
+                                             }
+                                        }
+                                   }
+                              }
+                         }
+                    }
+               }
+          }
+     }
+
+     /* ----- Portfolio ----- */
+     .portfolio {
+          position: relative;
+          padding-top: 100px;
+          padding-bottom: 100px;
+          background-color: $color-secondary-light;
+
+          .portfolio-container {
+
+               .portfolio-row {
+
+                    .portfolio-column {
+                         position: relative;
+                         z-index: 1;
+
+                         .portfolio-header {
+
+                              .portfolio-header-heading {
+                                   font-size: 60px;
+                                   font-weight: 700;
+                                   color: $color-primary-dark;
+                                   margin-bottom: 2rem;
+                              }
+                         }
+
+                         .portfolio-card {
+                              background-color: $color-primary-light;
+                              margin-bottom: 2rem;
+
+                              .portfolio-card-image-wrapper {
+                                   position: relative;
+                                   overflow: hidden;
+
+                                   &:hover {
+                    
+                                        .portfolio-card-image-inner-content {
+                                             background-color: rgba(0, 0, 0, 0.5);
+
+                                             .portfolio-card-image-inner-content-link {
+
+                                                  .portfolio-card-image-inner-content-icon-background {
+                                                       opacity: 1;
+          
+                                                       .portfolio-card-image-inner-content-icon {
+                                                            opacity: 1;
+                                                        }
+                                                  }
+                                             }
+                                        }
+                                   }
+
+                                   .portfolio-card-image {
+                                        max-width: 100%;
+                                        height: auto;
+                                   }
+     
+                                   .portfolio-card-image-inner-content {
+                                        position: absolute;
+                                        left: 0;
+                                        right: 0;
+                                        top: 0;
+                                        bottom: 0;
+                                        z-index: 2;
+                                        background-color: transparent;
+                                        transition: background-color 500ms ease;
+                                        display: flex;
+                                        place-items: center;
+                                        place-content: center;
+                                        align-items: center;
+                                        justify-content: center;
+
+                                        .portfolio-card-image-inner-content-link {
+                                             text-decoration: none;
+
+                                             .portfolio-card-image-inner-content-icon-background {
+                                                  opacity: 0;
+                                                  width: 60px;
+                                                  height: 60px;
+                                                  border-radius: 100%;
+                                                  border: 2px solid $color-primary-light;
+                                                  display: flex;
+                                                  justify-content: center;
+                                                  align-items: center;
+                                                  transition: opacity 500ms ease;
+          
+                                                  .portfolio-card-image-inner-content-icon {
+                                                       opacity: 0;
+                                                       font-size: 24px;
+                                                       color: $color-primary-light;
+                                                       transition: opacity 500ms ease;
+                                                  }
+                                             }
+                                        }
+                                   }
+                              }
+
+                              .portfolio-card-heading {
+                                   color: $color-primary-dark;
+                                   font-size: 16px;
+                                   font-weight: 600;
+                                   padding-top: 1rem;
+                                   padding-bottom: 1rem;
+                                   text-align: $text-center;
+                                   
+
+                                   .portfolio-card-header-link {
+                                        color: $color-primary-dark;
+                                        text-decoration: none;
+                                        position: relative;
+                                        z-index: 999;
+                                   }
+                              }
+                         }
+                    }
+               }
+          }
+     }
+}
+
+/* ----- Footer ----- */
+.footer {
+     position: relative;
+     padding-top: 75px;
+     padding-bottom: 75px;
+     background-color: $color-primary;
+
+     .footer-container {
+
+          .footer-row {
+
+               .footer-column {
+
+                    .footer-social {
+                         display: flex;
+                         justify-content: center;
+                         place-content: center;
+                         margin-bottom: 2rem;
+
+                         .footer-social-item {
+                              padding-left: 1rem;
+                              padding-right: 1rem;
+
+                              .footer-social-link {
+                                   display: flex;
+                                   align-items: center;
+                                   justify-content: center;
+                                   place-content: center;
+                                   place-items: center;
+                                   text-align: center;
+                                   width: 45px;
+                                   height: 45px;
+                                   border: 1px solid $color-primary-light;
+                                   border-radius: 100%;
+                                   color: $color-primary-light;
+                                   text-decoration: none;
+                                   transition: all 200ms ease-in-out;
+
+                                   &:hover {
+                                        background-color: $color-primary-light;
+                                        color: $color-primary;
+                                   }
+                              }
+                         }
+                    }
+
+                    .footer-copyright {
+
+                         .footer-copyright-item {
+                              text-align: $text-center;
+                              color: $color-primary-light;
+                         }
+                    }
+               }
+          }
+     }
+}
