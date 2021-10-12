@@ -65,3 +65,49 @@ $(document).ready(function(){
  
      });
 });
+
+var chatbox = document.getElementById('fb-customer-chat');
+chatbox.setAttribute("page_id", "104897068439792");
+chatbox.setAttribute("attribution", "biz_inbox");
+
+window.fbAsyncInit = function() {
+FB.init({
+     xfbml            : true,
+     version          : 'v12.0'
+});
+};
+
+(function(d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) return;
+js = d.createElement(s); js.id = id;
+js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+var form = document.getElementById("my-form");
+               
+async function handleSubmit(event) {
+event.preventDefault();
+var status = document.getElementById("my-form-status");
+var data = new FormData(event.target);
+fetch(event.target.action, {
+method: form.method,
+body: data,
+headers: {
+     'Accept': 'application/json'
+}
+}).then(response => {
+status.innerHTML = "Thanks for your submission!";
+form.reset()
+}).catch(error => {
+status.innerHTML = "Oops! There was a problem submitting your form"
+});
+}
+form.addEventListener("submit", handleSubmit)
+
+setTimeout(function() {
+
+$('#my-form-status').fadeOut('fast');
+
+}, 5000);

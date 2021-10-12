@@ -423,7 +423,7 @@
                          
                          <div class="contact-column col-12 col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12">
 
-                              <form class="contact-form" method="POST" action="">
+                              <form class="contact-form" method="POST" id="my-form" action="https://formspree.io/f/mwkazdgo">
 
                                    <div class="contact-form-row row">
 
@@ -475,7 +475,7 @@
 
                                                   <div class="contact-form-label">Message</div>
 
-                                                  <textarea class="contact-form-textarea form-control" rows="5"></textarea>
+                                                  <textarea class="contact-form-textarea form-control" name="message" rows="5" required></textarea>
 
                                              </div>
 
@@ -485,7 +485,9 @@
 
                                              <div class="contact-form-item">
 
-                                                  <button type="submit" name="submit-message" class="contact-form-button" title="Click to submit the message.">Submit</button>
+                                                  <button type="submit" name="submit-message" class="contact-form-button" id="my-form-button" title="Click to submit the message.">Submit</button>
+
+                                                  <div class="contact-form-status" id="my-form-status"></div>
 
                                              </div>
 
@@ -552,27 +554,6 @@
           <!-- Your Chat Plugin code -->
           <div id="fb-customer-chat" class="fb-customerchat">
           </div>
-
-          <script>
-               var chatbox = document.getElementById('fb-customer-chat');
-               chatbox.setAttribute("page_id", "104897068439792");
-               chatbox.setAttribute("attribution", "biz_inbox");
-
-               window.fbAsyncInit = function() {
-               FB.init({
-                    xfbml            : true,
-                    version          : 'v12.0'
-               });
-               };
-
-               (function(d, s, id) {
-               var js, fjs = d.getElementsByTagName(s)[0];
-               if (d.getElementById(id)) return;
-               js = d.createElement(s); js.id = id;
-               js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-               fjs.parentNode.insertBefore(js, fjs);
-               }(document, 'script', 'facebook-jssdk'));
-          </script>
 
           <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" defer></script>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
