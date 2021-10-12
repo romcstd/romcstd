@@ -106,8 +106,8 @@ status.innerHTML = "Oops! There was a problem submitting your form"
 }
 form.addEventListener("submit", handleSubmit)
 
-setTimeout(function() {
+// setTimeout(function() {
 
-$('#my-form-status').fadeOut('fast');
+// $('#my-form-status').fadeOut('fast');
 
-}, 5000);
+// }, 5000);
