@@ -14,7 +14,7 @@ const folders = [
 ]
 const files = [
     { name: ".gitignore", alt: "Git Ignore", icon: "/icons/gitignore.svg" },
-    { name: "eslint.config.mjs", alt: "Next Config", icon: "/icons/next-config.svg" },
+    { name: "eslint.config.mjs", alt: "Next Config", icon: "/icons/eslint.svg" },
     { name: "next-env.d.ts", alt: "Next Env Def Typescript", icon: "/icons/next-env-typescript-def.svg" },
     { name: "next.config.ts", alt: "Package Json", icon: "/icons/next-config.svg" },
     { name: "package.json", alt: "Package Json", icon: "/icons/package-json.svg" },
