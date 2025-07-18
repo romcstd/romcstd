@@ -3,7 +3,7 @@ import ActivityBar from "@/app/components/ActivityBar";
 import Sidebar from "@/app/components/Sidebar";
 import StatusBar from "@/app/components/StatusBar";
 import NavbarOpenEditor from "@/app/components/NavbarOpenEditor"
-export default function Home() {
+export default function Portfolio() {
   return (
     <div className="relative h-screen w-screen">
       <Header />

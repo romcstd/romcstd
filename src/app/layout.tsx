@@ -19,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" app-version="release-v1.3">
+    <html lang="en" app-version="release-v1.4">
       <body
         className={`${firaCode.variable} antialiased`}
       >
