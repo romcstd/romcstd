@@ -9,7 +9,10 @@ const navItems = ["File", "Edit", "Selection", "View", "Go", "Run", "Terminal", 
 
 export default function Header() {
     return (
-        <header className="relative bg-[#181818] border-b-1 border-b-[#3C3C3C]" role="banner">
+        <header 
+            className="fixed top-0 left-0 w-full h-9 bg-[#181818] border-b border-b-[#3C3C3C] z-20" 
+            role="banner"
+        >
             <nav className="flex justify-between items-center" role="navigation" aria-label="VSCode Menu">
                 <ul className="flex items-center gap-4 text-xs text-zinc-400 pl-2">
                     <li>

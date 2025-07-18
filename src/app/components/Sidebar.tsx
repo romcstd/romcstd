@@ -27,11 +27,11 @@ const files = [
 export default function Sidebar() {
     return (
         <aside
-            className="relative flex bg-[#181818]"
+            className="fixed top-9 bottom-6 left-12 w-auto bg-[#181818]"
             role="complementary"
             aria-label="Sidebar"
         >
-            <div className="w-72 flex flex-col py-2 border-r-1 border-r-[#3C3C3C]">
+            <div className="h-full w-72 flex flex-col py-2 border-r-1 border-r-[#3C3C3C]">
                 <div className="flex justify-between px-4 mb-3">
                     <span className="text-[11px] uppercase text-xs text-primary">
                         Explorer

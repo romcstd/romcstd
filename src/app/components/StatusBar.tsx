@@ -4,8 +4,8 @@ import { VscCheckAll, VscBell } from "react-icons/vsc";
 
 export default function StatusBar() {
     return (
-        <section
-            className="w-full bg-[#181818] text-gray-200 text-xs flex items-center px-2 py-1 justify-between border-t-1 border-t-[#3C3C3C]"
+        <footer
+            className="fixed bottom-0 left-0 w-full h-6 bg-[#181818] text-gray-200 text-xs flex items-center px-2 py-1 justify-between border-t border-t-[#3C3C3C] z-20"
             aria-label="Status bar"
         >
             <div className="flex items-center gap-4">
@@ -26,6 +26,6 @@ export default function StatusBar() {
                 <span className="flex items-center gap-1" title="Formatter: Prettier"><VscCheckAll role="img" aria-hidden="true" /> Prettier</span>
                 <span className="flex items-center gap-1" title="Notifications"><VscBell role="img" aria-hidden="true" /></span>
             </div>
-        </section>
+        </footer>
     )
 }
