@@ -27,7 +27,7 @@ const files = [
 export default function Sidebar() {
     return (
         <aside
-            className="fixed top-9 bottom-6 left-12 w-auto bg-[#181818]"
+            className="fixed top-9 bottom-6 left-12 w-auto bg-[#181818] hidden xl:block"
             role="complementary"
             aria-label="Sidebar"
         >

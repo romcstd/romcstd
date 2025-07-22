@@ -13,9 +13,9 @@ export default function NavbarOpenEditor() {
             path: "/",
         },
         {
-            name: "Contact",
-            file: "Contact.tsx",
-            path: "/contact",
+            name: "Skills",
+            file: "Skills.tsx",
+            path: "/skills",
         },
         {
             name: "Portfolio",
