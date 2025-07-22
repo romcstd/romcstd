@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ChevronRight } from "lucide-react"
 
 export default function NavbarOpenEditor() {
     const pathname = usePathname();
@@ -25,7 +24,7 @@ export default function NavbarOpenEditor() {
         },
     ];
     return (
-        <div className="relative w-full">
+        <section className="relative w-full">
             <div className="flex items-center bg-[#181818]  divide-x-1 divide-solid divide-[#3C3C3C]">
                 {files.map(({ name, file, path }) => {
                     const isActive = pathname === path;
@@ -69,6 +68,6 @@ export default function NavbarOpenEditor() {
                     <span key={file.path}>{file.file}</span>
                 ))}
             </div> */}
-        </div>
+        </section>
     )
 }
