@@ -14,7 +14,7 @@ Designed to showcase your coding persona in a familiar interface with high perfo
 
 ## 📦 Version
 
-**Current Release:** `v1.7`
+**Current Release:** `v1.8`
 
 ## 🚀 Stack Overview
 

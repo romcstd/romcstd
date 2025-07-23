@@ -8,8 +8,8 @@ export default function NavbarOpenEditor() {
     const pathname = usePathname();
     const files = [
         {
-            name: "Home",
-            file: "Home.tsx",
+            name: "About",
+            file: "About.tsx",
             path: "/",
         },
         {
@@ -18,9 +18,9 @@ export default function NavbarOpenEditor() {
             path: "/skills",
         },
         {
-            name: "Portfolio",
-            file: "Portfolio.tsx",
-            path: "/portfolio",
+            name: "Projects",
+            file: "Projects.tsx",
+            path: "/projects",
         },
     ];
     return (
@@ -33,7 +33,7 @@ export default function NavbarOpenEditor() {
                             key={name}
                             href={path}
                             className={[
-                                "flex text-xs py-2 pl-2 pr-8",
+                                "flex text-xs py-2 pl-2 pr-2 sm:pr-8",
                                 isActive
                                     ? "bg-[#1f1f1f] text-white border-t-1 border-t-[#0078d4]"
                                     : "hover:bg-[#1f1f1f] hover:text-white"

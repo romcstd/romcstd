@@ -10,7 +10,7 @@ import {
 } from "react-icons/vsc";
 
 const topIcons = [
-    { icon: VscFiles, label: "Explorer" },
+    { icon: VscFiles, label: "Explorer", active: true },
     { icon: VscSearch, label: "Search" },
     { icon: VscSourceControl, label: "Source Control" },
     { icon: VscDebug, label: "Run & Debug" },
@@ -23,6 +23,26 @@ const bottomIcons = [
     { icon: VscSettingsGear, label: "Settings" },
 ];
 
+type IconProps = {
+    icon: React.ElementType;
+    label: string;
+    active?: boolean;
+};
+
+const IconButton = ({ icon: Icon, label, active }: IconProps) => (
+    <li>
+        <button
+            type="button"
+            className={`${active ? "text-white" : "text-zinc-400"} hover:text-white focus:outline-none transition-colors focus:text-white`}
+            aria-label={label}
+            title={label}
+        >
+            <Icon className="w-6 h-6" />
+        </button>
+    </li>
+);
+
+
 export default function ActivityBar() {
     return (
         <aside
@@ -31,32 +51,14 @@ export default function ActivityBar() {
             aria-label="Activity Bar"
         >
             <div className="flex flex-col justify-between h-full">
-                <ul className="flex flex-col gap-6 text-zinc-400">
-                    {topIcons.map(({ icon: Icon, label }) => (
-                        <li key={label}>
-                            <button
-                                type="button"
-                                className="hover:text-white focus:outline-none focus:text-white"
-                                aria-label={label}
-                                title={label}
-                            >
-                                <Icon className="w-6 h-6" />
-                            </button>
-                        </li>
+                <ul className="flex flex-col gap-6">
+                    {topIcons.map((item) => (
+                         <IconButton key={item.label} {...item} />
                     ))}
                 </ul>
                 <ul className="flex flex-col gap-6 text-zinc-400">
-                    {bottomIcons.map(({ icon: Icon, label }) => (
-                        <li key={label}>
-                            <button
-                                type="button"
-                                className="hover:text-white focus:outline-none focus:text-white"
-                                aria-label={label}
-                                title={label}
-                            >
-                                <Icon className="w-6 h-6" />
-                            </button>
-                        </li>
+                    {bottomIcons.map((item) => (
+                        <IconButton key={item.label} {...item} />
                     ))}
                 </ul>
             </div>

@@ -11,15 +11,19 @@ const socialIcons = [
 export default function AboutMe() {
     return (
         <section className="overflow-y-auto p-4 sm:p-6 flex flex-col justify-center h-full text-center sm:text-left">
-            <h1 className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl uppercase">Hello, I&apos;m Romel Custodio</h1>
-            <p className="text-zinc-300 mt-2 text-2xl sm:text-5xl md:text-6xl lg:text-7xl uppercase font-bold">Frontend Developer</p>
-            <ul className="text-sm sm:text-base">
-                <li className="text-zinc-300 mt-4">I love building user interfaces and creating seamless user experiences.</li>
-                <li className="text-zinc-300 mt-2">
+            <div className="text-white text-lg sm:text-xl lg:text-2xl uppercase">Hello, I&apos;m Romel Custodio</div>
+            <div className="text-white mt-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl uppercase font-bold">Frontend Developer</div>
+            <ul className="text-sm sm:text-base mt-4">
+                <li className="text-zinc-300">I love building user interfaces and creating seamless user experiences.</li>
+                <li className="text-zinc-300 mt-4">In my free time, I usually play games, watch movies or TV shows, and go for walks or jog.</li>
+                <li className="text-zinc-300 mt-4">
                     Let’s stay connected! You can contact me directly at{" "}
-                    <Link href="tel:+639389744926" className="hover:underline">+63-938-9744-926</Link>{" "}
-                    or email me at{" "} <Link href="https://mail.google.com/mail/u/0/?fs=1&to=romelroxascustodio@gmail.com&tf=cm" target="_blank" rel="noopener noreferrer" className="hover:underline">romelroxascustodio@gmail.com</Link></li>
-                <li className="text-zinc-300 mt-2">Follow me on social media below.</li>
+                    <Link href="tel:+639389744926" className="hover:underline">+63-938-9744-926</Link>
+                </li>
+                <li className="text-zinc-300 mt-4">or email me at{" "}
+                    <Link href="https://mail.google.com/mail/u/0/?fs=1&to=romelroxascustodio@gmail.com&tf=cm" target="_blank" rel="noopener noreferrer" className="hover:underline">romelroxascustodio@gmail.com</Link>
+                </li>
+                <li className="text-zinc-300 mt-4">Follow me on social media below.</li>
             </ul>
             <ul className="mt-6">
                 {socialIcons.map(({ icon: Icon, label, url }) => (

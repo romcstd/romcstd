@@ -1,12 +1,21 @@
 import type { Metadata } from "next";
-import { Fira_Code } from 'next/font/google';
+import { Inter, Fira_Code } from 'next/font/google';
 import "./globals.css";
 
 const firaCode = Fira_Code({
   subsets: ['latin'],
+  weight: ['400', '500', '700'], // Only load what you need
   variable: '--font-fira-code', // optional: useful for Tailwind
   display: 'swap',
 });
+
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['400', '500', '700', '800', '900'], // Only load what you need
+  variable: '--font-inter',      // Optional CSS variable
+  display: 'swap',
+});
+
 
 export const metadata: Metadata = {
   title: "Romel Custodio | Front End Developer",
@@ -19,9 +28,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" app-version="release-v1.7">
+    <html lang="en" app-version="release-v1.8">
       <body
-        className={`${firaCode.variable} antialiased`}
+        className={`${inter.variable} ${firaCode.variable} antialiased`}
       >
         {children}
       </body>
