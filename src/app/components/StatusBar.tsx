@@ -10,7 +10,7 @@ export default function StatusBar() {
         >
             <div className="flex items-center gap-2 sm:gap-4">
                 <span className="flex items-center gap-1" aria-label="Current branch: development" title="Current branch: development">
-                    <FaCodeBranch className="text-blue-400" role="img" aria-hidden="true" /> development
+                    <FaCodeBranch className="text-[#0078d4]" role="img" aria-hidden="true" /> development
                 </span>
                 <span className="flex items-center gap-2" aria-label="Status indicators">
                     <FaCircleXmark className="text-red-400" role="img" aria-hidden="true" /> 0

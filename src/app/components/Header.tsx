@@ -7,10 +7,16 @@ import {
 
 const navItems = ["File", "Edit", "Selection", "View", "Go", "Run", "Terminal", "Help"];
 
+const windowControls = [
+    { icon: VscChromeMinimize, label: "Minimize Window", title: "Minimize" },
+    { icon: VscChromeRestore, label: "Restore Window", title: "Restore" },
+    { icon: VscChromeClose, label: "Close Window", title: "Close", danger: true },
+];
+
 export default function Header() {
     return (
-        <header 
-            className="fixed top-0 left-0 w-full h-9 bg-[#181818] border-b border-b-[#3C3C3C] z-20 overflow-x-auto overflow-y-hidden sm:overflow-hidden" 
+        <header
+            className="fixed top-0 left-0 w-full h-9 bg-[#181818] border-b border-b-[#3C3C3C] z-20 overflow-x-auto overflow-y-hidden sm:overflow-hidden"
             role="banner"
         >
             <nav className="flex justify-between items-center" role="navigation" aria-label="VSCode Menu">
@@ -29,39 +35,19 @@ export default function Header() {
                     ))}
                 </ul>
                 <ul className="flex text-white">
-                    <li>
-                        <button
-                            type="button"
-                            className="w-12 h-9 flex items-center justify-center hover:bg-[#2A2D2E] focus:outline-none"
-                            aria-label="Minimize Window"
-                            title="Minimize"
-                        >
-                            <VscChromeMinimize className="w-4 h-4" aria-label="VscChromeMinimize Icon" />
-                        </button>
-
-                    </li>
-                    <li>
-                        <button
-                            type="button"
-                            className="w-12 h-9 flex items-center justify-center hover:bg-[#2A2D2E] focus:outline-none"
-                            aria-label="Restore Window"
-                            title="Restore"
-                        >
-                            <VscChromeRestore className="w-4 h-4" aria-label="VscChromeRestore Icon" />
-                        </button>
-
-                    </li>
-                    <li>
-                        <button
-                            type="button"
-                            className="w-12 h-9 flex items-center justify-center hover:bg-[#C42B1C] focus:outline-none"
-                            aria-label="Close Window"
-                            title="Close"
-                        >
-                            <VscChromeClose className="w-4 h-4" aria-label="VscChromeClose Icon" />
-                        </button>
-
-                    </li>
+                    {windowControls.map(({ icon: Icon, label, title, danger }, i) => (
+                        <li key={i}>
+                            <button
+                                type="button"
+                                className={`w-12 h-9 flex items-center justify-center focus:outline-none transition-colors ${danger ? "hover:bg-[#C42B1C]" : "hover:bg-[#2A2D2E]"
+                                    }`}
+                                aria-label={label}
+                                title={title}
+                            >
+                                <Icon className="w-4 h-4" />
+                            </button>
+                        </li>
+                    ))}
                 </ul>
             </nav>
         </header>

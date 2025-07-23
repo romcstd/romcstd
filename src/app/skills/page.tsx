@@ -5,7 +5,7 @@ import StatusBar from "@/app/components/StatusBar";
 import NavbarOpenEditor from "@/app/components/NavbarOpenEditor"
 import Skills from "@/app/components/Skills";
 
-export default function Contact() {
+export default function SkillsPage() {
   return (
     <div className="relative h-screen w-screen">
       <Header />
