@@ -10,10 +10,10 @@ const socialIcons = [
 
 export default function AboutMe() {
     return (
-        <section className="overflow-y-auto p-6 flex flex-col justify-center h-full">
-            <h1 className="text-white text-3xl uppercase">Hello, I&apos;m Romel Custodio</h1>
-            <p className="text-zinc-300 mt-2 text-7xl uppercase font-bold">Frontend Developer</p>
-            <ul>
+        <section className="overflow-y-auto p-4 sm:p-6 flex flex-col justify-center h-full text-center sm:text-left">
+            <h1 className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl uppercase">Hello, I&apos;m Romel Custodio</h1>
+            <p className="text-zinc-300 mt-2 text-2xl sm:text-5xl md:text-6xl lg:text-7xl uppercase font-bold">Frontend Developer</p>
+            <ul className="text-sm sm:text-base">
                 <li className="text-zinc-300 mt-4">I love building user interfaces and creating seamless user experiences.</li>
                 <li className="text-zinc-300 mt-2">
                     Let’s stay connected! You can contact me directly at{" "}

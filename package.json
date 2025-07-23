@@ -1,6 +1,6 @@
 {
   "name": "romcstd",
-  "version": "release-v1.6",
+  "version": "release-v1.7",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
