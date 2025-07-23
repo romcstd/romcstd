@@ -10,11 +10,11 @@ const navItems = ["File", "Edit", "Selection", "View", "Go", "Run", "Terminal", 
 export default function Header() {
     return (
         <header 
-            className="fixed top-0 left-0 w-full h-9 bg-[#181818] border-b border-b-[#3C3C3C] z-20" 
+            className="fixed top-0 left-0 w-full h-9 bg-[#181818] border-b border-b-[#3C3C3C] z-20 overflow-x-auto overflow-y-hidden sm:overflow-hidden" 
             role="banner"
         >
             <nav className="flex justify-between items-center" role="navigation" aria-label="VSCode Menu">
-                <ul className="flex items-center gap-4 text-xs text-zinc-400 pl-2">
+                <ul className="h-9 flex items-center gap-4 text-xs text-zinc-400 pl-2">
                     <li>
                         <VscVscode className="w-5 h-5 text-[#0078d4]" aria-label="VscVscode Icon" />
                     </li>
