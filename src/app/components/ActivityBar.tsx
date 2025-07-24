@@ -1,3 +1,4 @@
+import { ThemeToggle } from "./ThemeToggle";
 import {
     VscFiles,
     VscSearch,
@@ -33,7 +34,7 @@ const IconButton = ({ icon: Icon, label, active }: IconProps) => (
     <li>
         <button
             type="button"
-            className={`${active ? "text-white" : "text-zinc-400"} hover:text-white focus:outline-none transition-colors focus:text-white`}
+            className={`${active ? "text-primary" : "text-zinc-400"} hover:text-primary focus:outline-none transition-colors focus:text-primary`}
             aria-label={label}
             title={label}
         >
@@ -46,7 +47,7 @@ const IconButton = ({ icon: Icon, label, active }: IconProps) => (
 export default function ActivityBar() {
     return (
         <aside
-            className="fixed top-9 bottom-6 left-0 w-12 bg-[#181818] border-r border-[#3C3C3C] p-3 z-10"
+            className="fixed top-9 bottom-6 left-0 w-12 bg-background border-r p-3 z-10"
             role="navigation"
             aria-label="Activity Bar"
         >
@@ -57,6 +58,7 @@ export default function ActivityBar() {
                     ))}
                 </ul>
                 <ul className="flex flex-col gap-6 text-zinc-400">
+                    <li><ThemeToggle /></li>
                     {bottomIcons.map((item) => (
                         <IconButton key={item.label} {...item} />
                     ))}
