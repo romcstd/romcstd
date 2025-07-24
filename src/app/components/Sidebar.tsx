@@ -27,32 +27,32 @@ const files = [
 export default function Sidebar() {
     return (
         <aside
-            className="fixed top-9 bottom-6 left-12 w-auto bg-[#181818] hidden xl:block"
+            className="fixed top-9 bottom-6 left-12 w-auto bg-background hidden xl:block"
             role="complementary"
             aria-label="Sidebar"
         >
-            <div className="h-full w-72 flex flex-col py-2 border-r-1 border-r-[#3C3C3C]">
+            <div className="h-full w-72 flex flex-col py-2 border-r">
                 <div className="flex justify-between px-4 mb-3">
                     <span className="text-[11px] uppercase text-xs text-primary">
                         Explorer
                     </span>
                     <button
                         aria-label="More Options"
-                        className="text-zinc-400 hover:text-white"
+                        className="text-primary hover:text-primary"
                     >
                         <Ellipsis size={16} />
                     </button>
                 </div>
                 <div>
-                    <div className="flex items-center gap-1 ms-4 mb-2 text-xs font-bold text-white">
+                    <div className="flex items-center gap-1 ms-4 mb-2 text-xs tracking-wider font-bold text-primary">
                         <ChevronDown size={16} aria-hidden="true" />
                         <FolderOpen size={16} aria-hidden="true" />
                         <span className="uppercase">romcstd</span>
                     </div>
-                    <ul className="flex flex-col gap-2 ms-8 text-xs text-zinc-200" aria-label="Folders">
+                    <ul className="flex flex-col gap-2 ms-8 tracking-wider" aria-label="Folders">
                         {folders.map(({ name, alt, icon }) => (
-                            <li key={name} className="flex flex-row">
-                                <ChevronRight size={16} className="text-zinc-400 mr-1" aria-hidden="true" />
+                            <li key={name} className="flex flex-row text-primary text-xs">
+                                <ChevronRight size={16} className="text-primary mr-1" aria-hidden="true" />
                                 <Image
                                     src={icon}
                                     alt={alt}
@@ -65,9 +65,9 @@ export default function Sidebar() {
                             </li>
                         ))}
                     </ul>
-                    <ul className="flex flex-col gap-2 pl-[52px] mt-3 text-xs" aria-label="Files">
+                    <ul className="flex flex-col gap-2 pl-[52px] mt-3 tracking-wider" aria-label="Files">
                         {files.map(({ name, alt, icon }) => (
-                            <li key={name} className="flex items-center">
+                            <li key={name} className="flex items-center text-primary text-xs">
                                 <Image
                                     src={icon}
                                     alt={alt}
