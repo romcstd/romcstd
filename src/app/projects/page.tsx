@@ -10,7 +10,7 @@ export default function ProjectsPage() {
       <Header />
       <ActivityBar />
       <Sidebar />
-      <main className="fixed top-9 bottom-6 left-12 xl:left-84 right-0 bg-[#1e1e1e] z-0 flex flex-col">
+      <main className="fixed top-9 bottom-6 left-12 xl:left-84 right-0 bg-secondary z-0 flex flex-col">
         <NavbarOpenEditor />
         <Projects />
       </main>

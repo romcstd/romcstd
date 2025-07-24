@@ -25,7 +25,7 @@ export default function NavbarOpenEditor() {
     ];
     return (
         <section className="relative w-full">
-            <div className="flex items-center bg-[#181818]  divide-x-1 divide-solid divide-[#3C3C3C]">
+            <div className="flex items-center bg-background divide-x-1 divide-solid">
                 {files.map(({ name, file, path }) => {
                     const isActive = pathname === path;
                     return (
@@ -33,10 +33,10 @@ export default function NavbarOpenEditor() {
                             key={name}
                             href={path}
                             className={[
-                                "flex text-xs py-2 pl-2 pr-2 sm:pr-8",
+                                "flex text-xs tracking-wider py-2 pl-2 pr-2 sm:pr-8 text-zinc-400 font-medium",
                                 isActive
-                                    ? "bg-[#1f1f1f] text-white border-t-1 border-t-[#0078d4]"
-                                    : "hover:bg-[#1f1f1f] hover:text-white"
+                                    ? "bg-secondary !text-primary border-t-1 border-t-[#0078d4]"
+                                    : "hover:bg-secondary hover:text-primary"
                             ].join(" ")}>
                             <Image
                                 src="/icons/react-ts.svg"
