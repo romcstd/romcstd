@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Card, CardHeader, CardContent, CardFooter } from "@/components/ui/card";
-import { FaGithub } from "react-icons/fa6";
+import { FaChrome, FaGithub } from "react-icons/fa6";
 
 interface Project {
     id: string;
@@ -16,14 +16,14 @@ interface Project {
 
 const projects: Project[] = [
     {
-        id: "amynch-digital-mind",
-        name: "Amynch Digital Mind",
-        description: "A Business website offer a services of Web Development, Search Engine Optimization (SEO), Accounting Services, and Virtual Assistance.",
-        title: "Amynch Digital Mind",
-        image: "/projects/amynch-digital-mind.png",
-        skills: ["React", "Tailwind CSS", "React Router"],
-        link: "https://amynch-digital-mind.vercel.app/",
-        github: "https://github.com/romcstd/amynch-digital-mind"
+        id: "threadup",
+        name: "ThreadUp",
+        description: "ThreadUp is a modern MERN-stack web application that empowers users to create accounts, share posts, and engage in meaningful discussions through thread-based conversations.",
+        title: "ThreadUp",
+        image: "/projects/threadup.png",
+        skills: ["React", "Vite", "Tailwind CSS", "Typescript", "Zustand", "Node.js", "Express", "MongoDB"],
+        link: "https://threadup-app.vercel.app/",
+        github: "https://github.com/romcstd/threadup"
     },
     {
         id: "netflix-clone",
@@ -31,10 +31,20 @@ const projects: Project[] = [
         description: "A custom-themed front-end replica of Netflix Tudum of Top 10 carousel with Country & Entertainment Filters and featuring theme toggle.",
         title: "Netflix Clone",
         image: "/projects/netflix-clone.png",
-        skills: ["Next.js", "Tailwind CSS", "Typescript"],
+        skills: ["Next.js", "React", "Tailwind CSS", "Typescript", "Vercel"],
         link: "https://netflix-one-phi.vercel.app/",
         github: "https://github.com/romcstd/netflix"
     },
+    {
+        id: "amynch-digital-mind",
+        name: "Amynch Digital Mind",
+        description: "A Business website offer a services of Web Development, Search Engine Optimization (SEO), Accounting Services, and Virtual Assistance.",
+        title: "Amynch Digital Mind",
+        image: "/projects/amynch-digital-mind.png",
+        skills: ["React", "Tailwind CSS", "React Router", "Vercel"],
+        link: "https://amynch-digital-mind.vercel.app/",
+        github: "https://github.com/romcstd/amynch-digital-mind"
+    }
 ]
 
 export default function Projects() {
@@ -72,9 +82,9 @@ export default function Projects() {
                                 ))}
                             </div>
                         </CardContent>
-                        <CardFooter className="p-4 pt-0 flex justify-between items-center">
+                        <CardFooter className="p-4 pt-0 flex justify-between items-center mt-auto">
                             <Link href={project.link} target="_blank" className="inline-flex items-center gap-2 text-xs hover:underline">
-                                <FaGithub className="h-4 w-4" />
+                                <FaChrome className="h-4 w-4" />
                                 Live Demo
                             </Link>
                             <Link href={project.github} target="_blank" className="inline-flex items-center gap-2 text-xs hover:underline">

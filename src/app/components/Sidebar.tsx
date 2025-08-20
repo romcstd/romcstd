@@ -49,9 +49,9 @@ export default function Sidebar() {
                         <FolderOpen size={16} aria-hidden="true" />
                         <span className="uppercase">romcstd</span>
                     </div>
-                    <ul className="flex flex-col gap-2 ms-8 tracking-wider" aria-label="Folders">
+                    <ul className="flex flex-col gap-2 ms-8 tracking-wide" aria-label="Folders">
                         {folders.map(({ name, alt, icon }) => (
-                            <li key={name} className="flex flex-row text-primary text-xs">
+                            <li key={name} className="flex flex-row text-primary text-xs font-medium">
                                 <ChevronRight size={16} className="text-primary mr-1" aria-hidden="true" />
                                 <Image
                                     src={icon}
@@ -65,9 +65,9 @@ export default function Sidebar() {
                             </li>
                         ))}
                     </ul>
-                    <ul className="flex flex-col gap-2 pl-[52px] mt-3 tracking-wider" aria-label="Files">
+                    <ul className="flex flex-col gap-2 pl-[52px] mt-3 tracking-wide" aria-label="Files">
                         {files.map(({ name, alt, icon }) => (
-                            <li key={name} className="flex items-center text-primary text-xs">
+                            <li key={name} className="flex items-center text-primary text-xs font-medium">
                                 <Image
                                     src={icon}
                                     alt={alt}

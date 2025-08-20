@@ -63,7 +63,7 @@ export default function Skills() {
                                     className="w-8 h-8"
                                     priority
                                 />
-                                <span className="text-zinc-400 text-xs font-bold">{skill.name}</span>
+                                <span className="text-primary text-xs font-bold">{skill.name}</span>
                             </Card>
                         )
                     })}
