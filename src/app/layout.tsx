@@ -29,7 +29,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" app-version="release-v1.9" suppressHydrationWarning>
+    <html lang="en" app-version="release-v2.0" suppressHydrationWarning>
       <body
         className={`${inter.variable} ${firaCode.variable} antialiased`}
       >
